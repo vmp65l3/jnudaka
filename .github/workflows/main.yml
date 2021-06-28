@@ -1,9 +1,6 @@
 name: 自动打卡
 
 on:
-  schedule:
-  - cron: "0 14,18 * * *"
-  
   push
   
 
