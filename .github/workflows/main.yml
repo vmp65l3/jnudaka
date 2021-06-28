@@ -4,7 +4,7 @@ on:
   schedule:
   - cron: "0 14,18 * * *"
   
-on: push
+  push
   
 
 jobs:
