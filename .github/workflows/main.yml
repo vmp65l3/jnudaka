@@ -1,7 +1,8 @@
 name: 自动打卡
 
 on:
-  push
+  schedule:
+    - cron: "0 10,12,14,16 * * *"
   
 
 jobs:
