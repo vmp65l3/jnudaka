@@ -22,11 +22,3 @@ jobs:
     - name: Renew
       run: python3 daka.py
 
-    - name: Commit and push
-      run: |
-        git diff
-        git config --global user.email "626522796@qq.com"
-        git config --global user.name "暗号"
-        git add .
-        git commit -am "GitHub Actions 自动打卡"
-        git push
