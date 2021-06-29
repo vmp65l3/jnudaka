@@ -4,8 +4,8 @@ import requests
 import json
 import os
 
-username = os.getenv("XUEHAO")
-password = os.getenv("MIMA")
+USERNAME = os.getenv("XUEHAO")
+PASSWORD = os.getenv("MIMA")
 print(username)
 print(password)
 
@@ -21,12 +21,12 @@ HEADER = {
     'Referer':'https://stuhealth.jnu.edu.cn/',
 }
 
-def jnu_daka_login(login_data):
+def jnu_daka_login(login_info):
     print ("模拟登录中...")
     
 
 
-    login_data = json.dumps(login_data)
+    login_data = json.dumps(login_info)
     
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
@@ -128,11 +128,11 @@ def jnu_daka_login(login_data):
     
 
 if __name__ == "__main__":
-    login_data = {
-        'password': password,
-        'username': username,
+    login_info = {
+        'username': USERNAME,
+        'password': PASSWORD,
     }
-    print(jnu_daka_login(login_data))
+    print(jnu_daka_login(login_info))
    
 
 
