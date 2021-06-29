@@ -4,6 +4,10 @@ import requests
 import json
 import os
 
+username = os.getenv("XUEHAO")
+passowrd = os.getenv("MIMA")
+print(username)
+
 
 HEADER = {
     'Host':'stuhealth.jnu.edu.cn',
@@ -19,11 +23,7 @@ HEADER = {
 def jnu_daka_login(login_data):
     print ("模拟登录中...")
     
-    username = os.getenv("XUEHAO")
-    passowrd = os.getenv("MIMA")
-    
-    print('MIMA')
-    print(username)
+
 
     login_data = json.dumps(login_data)
     
