@@ -30,11 +30,11 @@ def jnu_daka_login(login_info):
     
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
-        data = login_data,
+        data = login_info,
         headers = HEADER,
     )
     
-    print(login_data)
+    print(login_info)
     
     message = json.loads(response.content)
     if message['meta']['msg'] == '登录成功，今天已填写':
