@@ -34,6 +34,8 @@ def jnu_daka_login(login_info):
         headers = HEADER,
     )
     
+    print(login_data)
+    
     message = json.loads(response.content)
     if message['meta']['msg'] == '登录成功，今天已填写':
         return '您今天打过卡啦！'
