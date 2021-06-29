@@ -24,9 +24,7 @@ HEADER = {
 def jnu_daka_login(login_info):
     print ("模拟登录中...")
     
-
-
-    #login_data = json.dumps(login_info)
+    login_data = json.dumps(login_info)
     
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
@@ -131,8 +129,8 @@ def jnu_daka_login(login_info):
 
 if __name__ == "__main__":
     login_info = {
-        'username':username,
-        'password':password,
+        'username':'1834451023',
+        'password':'D9At_8avTYlYJmdDYR29Ew*=',
     }
     print(login_info)
     print(jnu_daka_login(login_info))
