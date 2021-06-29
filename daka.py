@@ -131,9 +131,10 @@ def jnu_daka_login(login_info):
 
 if __name__ == "__main__":
     login_info = {
-        'username': username,
-        'password': password,
+        'username':username,
+        'password':password,
     }
+    print(login_info)
     print(jnu_daka_login(login_info))
    
 
