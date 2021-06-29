@@ -4,10 +4,10 @@ import requests
 import json
 import os
 
-USERNAME = os.getenv("XUEHAO")
-PASSWORD = os.getenv("MIMA")
-print(USERNAME)
-print(PASSWORD)
+xuehao = os.getenv("XUEHAO")
+mima = os.getenv("MIMA")
+print(xuehao)
+print(mima)
 
 
 HEADER = {
@@ -129,8 +129,8 @@ def jnu_daka_login(login_info):
 
 if __name__ == "__main__":
     login_info = {
-        'username': USERNAME,
-        'password': PASSWORD,
+        'username': xuehao,
+        'password': mima,
     }
     print(jnu_daka_login(login_info))
    
