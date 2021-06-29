@@ -21,6 +21,8 @@ def jnu_daka_login(login_data):
     
     username = os.getenv("XUEHAO")
     passowrd = os.getenv("MIMA")
+    
+    print('MIMA')
 
     login_data = json.dumps(login_data)
     
