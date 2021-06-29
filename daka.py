@@ -4,10 +4,10 @@ import requests
 import json
 import os
 
-xuehao = os.getenv("XUEHAO")
-mima = os.getenv("MIMA")
-print(xuehao)
-print(mima)
+username = os.getenv("USERNAME")
+password = os.getenv("PASSWORD")
+print(username)
+
 
 
 HEADER = {
