@@ -6,8 +6,8 @@ import os
 
 USERNAME = os.getenv("XUEHAO")
 PASSWORD = os.getenv("MIMA")
-print(username)
-print(password)
+print(USERNAME)
+print(PASSWORD)
 
 
 HEADER = {
