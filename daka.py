@@ -4,8 +4,8 @@ import requests
 import json
 import os
 
-username = os.environ.get("XUEHAO")
-passowrd = os.environ.get("MIMA")
+username = os.getenv("XUEHAO")
+password = os.getenv("MIMA")
 print(username)
 print(password)
 
