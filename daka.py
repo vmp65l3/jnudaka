@@ -6,7 +6,7 @@ import os
 
 username = os.getenv("USERNAME")
 password = os.getenv("PASSWORD")
-print(username)
+#print(username)
 
 
 
@@ -28,11 +28,11 @@ def jnu_daka_login(login_info):
     
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
-        data = login_info,
+        data = login_data,
         headers = HEADER,
     )
     
-    print(login_info)
+    #print(login_info)
     
     message = json.loads(response.content)
     if message['meta']['msg'] == '登录成功，今天已填写':
@@ -59,7 +59,7 @@ def jnu_daka_login(login_info):
     )
     message = json.loads(r.content)
 
-    # 学生姓名（你的
+    # 学生姓名
     name = message['data']['xm']
 
     # 构造打卡信息并上传
@@ -129,10 +129,9 @@ def jnu_daka_login(login_info):
 
 if __name__ == "__main__":
     login_info = {
-        'username':'1834451023',
-        'password':'D9At_8avTYlYJmdDYR29Ew*=',
+        'username': '1834451023',
+        'password': 'D9At_8avTYlYJmdDYR29Ew*=',
     }
-    print(login_info)
     print(jnu_daka_login(login_info))
    
 
