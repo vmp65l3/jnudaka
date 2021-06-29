@@ -2,7 +2,7 @@ name: 自动打卡
 
 on:
   schedule:
-    - cron: "0 10,12,14,16 * * *"
+    - cron: "0 1,2,3,4 * * *"
   
 
 jobs:
