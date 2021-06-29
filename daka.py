@@ -2,6 +2,7 @@
 
 import requests
 import json
+import os
 
 
 HEADER = {
@@ -17,6 +18,9 @@ HEADER = {
 
 def jnu_daka_login(login_data):
     print ("模拟登录中...")
+    
+    username = os.getenv("xuehao")
+    passowrd = os.getenv("mima")
 
     login_data = json.dumps(login_data)
     
@@ -121,8 +125,8 @@ def jnu_daka_login(login_data):
 
 if __name__ == "__main__":
     login_data = {
-        'password': 'D9At_8avTYlYJmdDYR29Ew*=',
-        "username": xuehao,
+        'password': 'password',
+        'username': 'username',
     }
     print(jnu_daka_login(login_data))
    
