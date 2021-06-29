@@ -5,7 +5,7 @@ import json
 import os
 
 username = os.environ.get("XUEHAO")
-passowrd = os.getenv("MIMA")
+passowrd = os.environ.get("MIMA")
 print(username)
 print(password)
 
