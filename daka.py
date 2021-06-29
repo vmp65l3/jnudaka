@@ -19,8 +19,8 @@ HEADER = {
 def jnu_daka_login(login_data):
     print ("模拟登录中...")
     
-    username = os.getenv("xuehao")
-    passowrd = os.getenv("mima")
+    username = os.getenv("XUEHAO")
+    passowrd = os.getenv("MIMA")
 
     login_data = json.dumps(login_data)
     
