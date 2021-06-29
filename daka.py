@@ -26,7 +26,7 @@ def jnu_daka_login(login_info):
     
 
 
-    login_data = json.dumps(login_info)
+    #login_data = json.dumps(login_info)
     
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
