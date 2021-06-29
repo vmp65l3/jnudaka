@@ -18,7 +18,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    
-    - name: Renew
+        
+    - name: Env.
+      env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          
+    - name: Run app
       run: python3 daka.py
 
