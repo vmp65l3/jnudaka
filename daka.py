@@ -122,7 +122,7 @@ def jnu_daka_login(login_data):
 if __name__ == "__main__":
     login_data = {
         'password': 'D9At_8avTYlYJmdDYR29Ew*=',
-        "username": "1834451023",
+        "username": xuehao,
     }
     print(jnu_daka_login(login_data))
    
