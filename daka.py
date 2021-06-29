@@ -23,6 +23,7 @@ def jnu_daka_login(login_data):
     passowrd = os.getenv("MIMA")
     
     print('MIMA')
+    print('username')
 
     login_data = json.dumps(login_data)
     
