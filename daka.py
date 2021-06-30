@@ -34,13 +34,15 @@ response = requests.post(
     headers = HEADER,
 )
 
-#print(login_info)
 
 message = json.loads(response.content)
 if message['meta']['msg'] == '登录成功，今天已填写':
-    return '您今天打过卡啦！'
+    print('您今天打过卡啦！')
+    exit()
 elif message['meta']['success'] == False:
-    return '请检查你的抓包信息是否有误！'
+    print('请检查你的抓包信息是否有误！')
+    exit()
+else:
 
 print('模拟打卡中...')
 
