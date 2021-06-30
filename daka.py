@@ -54,6 +54,11 @@ def jnu_daka_login(login_info):
     mainData = message['data']['mainTable']
     health_params = {
         "mainTable":{
+            "passAreaC2": mainData["passAreaC2"],
+            "passAreaC3": mainData["passAreaC3"],
+            "passAreaC4": mainData["passAreaC4"],
+            "leaveTransportationOther": mainData["leaveTransportationOther"],
+            "other": mainData["other"],
             "wayStart":mainData['wayStart'],
             "arriveTime":mainData['arriveTime'],
             "way2Start":mainData['way2Start'],
