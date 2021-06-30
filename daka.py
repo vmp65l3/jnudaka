@@ -20,23 +20,20 @@ def jnu_daka_login(login_info):
 
     print ("模拟登录中...")
     
-    login_data = json.dumps(login_info)
-    
     response = requests.post(
         'https://stuhealth.jnu.edu.cn/api/user/login',
-        data = login_data,
+        data = json.dumps(login_info),
         headers = HEADER,
     )
     
     message = json.loads(response.content)
     if message['meta']['msg'] == '登录成功，今天已填写':
-        return '您今天打过卡啦！'
+        return '你今天已经打过卡啦！'
     elif message['meta']['success'] == False:
-        return '请检查你的抓包信息是否有误！'
+        return '请检查你的抓包信息。'
     
     print('模拟打卡中...')
     
-    # 获取 jnuid 和 idtype 
     jnuid = message['data']['jnuid']
     idtype = message['data']['idtype']
     # post stuinfo需要它们
@@ -53,8 +50,7 @@ def jnu_daka_login(login_info):
     # 学生姓名
     name = message['data']['xm']
     # 构造打卡信息并上传
-    # message['data']['mainTable']有你上一次打卡的信息
-    # 可以利用它快速构造正确的信息
+    # message['data']['mainTable']中有上一次打卡的信息，可以利用它快速构造正确的信息
     mainData = message['data']['mainTable']
     health_params = {
         "mainTable":{
